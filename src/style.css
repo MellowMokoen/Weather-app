@@ -1,6 +1,6 @@
 
 h1{
-  color: brown;
+  color: #207BBC;
   font-size: 25px;
   font-weight: 100;
   line-height: 28px;
@@ -14,7 +14,8 @@ ul{
 
 li{
   list-style: none;
-  color: #D366B8;
+  color: brown;
+  text-transform: capitalize;
   display: block;
   font-family: 'Courier New', Courier, monospace;
   font-size: 15px;
@@ -44,7 +45,7 @@ li{
 }
 
 .weather-temperature strong{
-  color: blueviolet;
+  color: #207BBC;
   font-size: 64px;
   line-height: 1;
   font-weight: 400;
@@ -55,4 +56,3 @@ li{
   font-size: 16px;
   top: -34px;
 }
-

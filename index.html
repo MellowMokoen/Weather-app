@@ -11,17 +11,38 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
+          <form id="search-form" class="mb-3">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="Type a city.."
+                  class="form-control"
+                  id="city-input"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="btn btn-primary w-100"
+                />
+              </div>
+            </div>
+          </form>
           <div class="overview">
-            <h1>Cape Town</h1>
+            <h1 id="city"></h1>
             <ul>
-              <li>Saturday 17:30</li>
-              <li>Cloudy</li>
+              <li id="date"></li>
+              <li id="description"></li>
             </ul>
           </div>
           <div class="row">
@@ -33,7 +54,7 @@
                   class="float-left"
                 />
                 <div class="float-left">
-                  <strong>12</strong
+                  <strong id="temperature"></strong
                   ><span class="units">°C |<a href="#"> °F</a></span>
                 </div>
               </div>
@@ -41,9 +62,8 @@
 
             <div class="col-6">
               <ul>
-                <li>Precipitation : 8%</li>
-                <li>Humidity : 80%</li>
-                <li>Wind : 2 km/h</li>
+                <li>Humidity : <span id="humidity"></span> %</li>
+                <li>Wind speed : <span id="wind"></span> km/h</li>
               </ul>
             </div>
           </div>
